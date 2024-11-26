@@ -1,6 +1,6 @@
 const boxCheck = document.getElementById('divStyle');
 const textField = document.querySelectorAll('.textfield');
-const button = document.getElementsByName('knapp');
+const button = document.getElementsByName('knapp')[0];
 const textDiv = document.getElementsByTagName('div')[0];
 
 function inputEvent(e){
@@ -31,6 +31,6 @@ boxCheck.addEventListener('change',function() {
 });
 
 button.addEventListener('click',function() {
-    textDiv.style.display = 'none';
+    textDiv.remove();
 });
 
