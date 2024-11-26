@@ -1,7 +1,7 @@
 let boxCheck = document.getElementById('divStyle');
-let textField = document.getElementsByClassName('textfield');
-let button = document.getElementsByName('knapp');
-let textDiv = document.getElementsByTagName('div');
+let textField = document.querySelectorAll('.textfield');
+let button = document.getElementsByName('knapp')[0];
+let textDiv = document.getElementsByTagName('div')[1];
 
 function inputEvent(e){
     console.log("Target: ", e.target);
@@ -19,8 +19,12 @@ inputTextfields.forEach(input=>{
 });
 
 boxCheck.addEventListener('change',function(){
-    let color = document.getElementById('color').value;
+    const color = document.getElementById('color').value;
     textDiv.style.backgroundColor = color;
 
+});
+
+button.addEventListener('click',function(){
+    textDiv.style.display = 'none'
 });
 
