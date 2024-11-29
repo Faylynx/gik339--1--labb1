@@ -5,6 +5,8 @@ const textDiv = document.getElementsByTagName('div')[0];
 
 function inputEvent(e){
     console.log("Target: ", e.target);
+    const name = e.target.name
+    console.log("Namn attribut:", name);
  
 
     if (e.target.id === "content") {
@@ -15,6 +17,7 @@ function inputEvent(e){
 
 Array.from(textField).forEach((input) => { 
     input.addEventListener('input', inputEvent);
+    input.addEventListener('blur', inputEvent);
 });
 
 const colorField = document.getElementById('color');
